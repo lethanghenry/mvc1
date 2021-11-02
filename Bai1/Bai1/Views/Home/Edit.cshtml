@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit</title>
+    <style>
+        #Edit {
+            background: #808080;
+        }
+
+            #Edit a {
+                color: white;
+            }
+    </style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+</head>
+<body>
+   <div class="edit">
+       <form id="editForm">
+           <div class="row col-md-12">
+               @Html.Action("Header", "Home")
+           </div>
+           <div class="row col-md-12">
+               <div class="container">
+
+                   <div class="col-md-3">
+                       @Html.Action("Menu", "Home")
+                   </div>
+                   <div class="col-md-9">
+                      
+                    </div>
+              </div>
+           </div>
+       </form>
+
+   </div>
+</body>
+</html>
+

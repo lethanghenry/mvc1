@@ -1,0 +1,52 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <style>
+        table tr td {
+            border: 1px solid black;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom:20px;
+            padding-top:20px;
+            
+        }
+           .menu table tr td a {
+                color: black;
+            }
+          .menu  table tr td:hover {
+                    background: #808080;
+                    color:white;
+                }
+        .menu table tr td a:hover {
+            background: #808080;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+       <div class="menu" style=" text-align:center;padding-left:60px;padding-top:20px;padding-bottom:20px;">
+           <table >
+               <tr>
+                   <td id="Home"><a href="/Home/Index">List</a></td>
+               </tr>
+               <tr>
+                   <td id="New"><a href="/Home/newBlog">New</a></td>
+               </tr>
+               <tr>
+                   <td id="Search"><a href="/Home/Search">Search</a></td>
+               </tr>
+               <tr>
+                   <td id="Edit"><a href="/Home/Edit">Edit</a></td>
+               </tr>
+           </table>
+       </div>
+    </div>
+</body>
+</html>

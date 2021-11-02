@@ -1,0 +1,104 @@
+﻿@model IEnumerable<Bai1.Models.Blog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Main</title>
+    <style>
+        table tr th
+        {
+            border:1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+   
+
+    <div class="mainBlog" >
+        <div class="row col-md-12">
+            @Html.Action("Header","Home")
+        </div>
+
+        <div class="row col-md-12">
+            <div class="container">
+
+                <div class="col-md-3">
+                    @Html.Action("Menu", "Home")
+                </div>
+
+                <div class="col-md-9">
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ID)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TIN)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.LOAI)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TRANGTHAI)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.VITRI)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NGAYPUBLIC)
+                            </th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TIN)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LOAI)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TRANGTHAI)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.VITRI)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NGAYPUBLIC)
+                            </td>
+
+                            <td>
+                                <button class="edt" style="border:0px"> @Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
+                            </td>
+
+                            <td>
+                                <button class="del" style="border:1px solid red;">  @Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
+                            </td>
+                        </tr>
+                        }
+
+                    </table>
+               
+                
+                 </div>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>
+

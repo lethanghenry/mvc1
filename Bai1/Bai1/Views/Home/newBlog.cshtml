@@ -1,0 +1,121 @@
+﻿@model Bai1.Models.Blog
+@{
+    ViewBag.Title = "newBlog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New</title>
+    <style>
+        #New {
+            background: #808080;
+        }
+
+            #New a {
+                color: white;
+            }
+    </style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    @*<script>
+            function btnReset_Click() {
+                $("#commentform").validate();
+            }
+        </script>*@
+</head>
+<body>
+    <div class="new">
+        <form id="commentform">
+            <div class="row col-md-12">
+                @Html.Action("Header", "Home")
+            </div>
+
+            <div class="row col-md-12">
+                <div class="container">
+
+                    <div class="col-md-3">
+                        @Html.Action("Menu", "Home")
+                    </div>
+                    <div class="col-md-9">
+                        <h2>New Blogs</h2>
+
+                       
+                            <label>Tiêu đề</label><br /><br />
+                            <input type="text" name="TieuDe" id="TieuDe"  />
+                        
+                        <br /><br />
+                        
+                        
+                   
+                            <label>Mô tả ngắn</label><br /><br />
+                            <input type="text" name="MoTaNgan" /><br /><br />
+                   
+
+ 
+                           
+                               <label>Chi Tiết</label><br /><br />
+                               <textarea name="ChiTiet"></textarea><br /><br />
+                     
+                            <label>Hình ảnh</label><br /><br />
+                            <input type="submit" name="HinhAnh"  value="Choosen Files" />
+                            <label>No file Choosen</label><br /><br />
+                        
+
+                      
+                        <div class="form-group">
+                            <label>Loại</label><br /><br />
+                            <select name="Loai">
+                                <option>Thời Sự</option>
+                                <option>Thế Giới</option>
+                                <option>Kinh Doanh</option>
+                                <option>Giải Trí</option>
+                                <option>Thể Thao</option>
+                            </select>
+                            <br /><br />
+                        </div>
+                       
+
+                        
+                            <label>Vị Trí</label><br /><br />
+                            <input type="checkbox" id="ViTri1" name="ViTri" value="VietNam" />
+                            <label for="ViTri1">Việt Nam</label><br /><br />
+
+                       
+
+                        <input type="checkbox" id="ViTri2" name="ViTri" value="ChauA" />
+                        <label for="ViTri2">Châu Á</label><br /><br />
+
+                        <input type="checkbox" id="ViTri3" name="ViTri" value="ChauAu" />
+                        <label for="ViTri3">Châu Âu</label><br /><br />
+
+                        <input type="checkbox" id="ViTri4" name="ViTri" value="ChauMy" />
+                        <label for="ViTri4">Châu Mỹ</label><br /><br />
+
+                        <label>Public</label><br /><br />
+                        <input type="radio" name="Public" value="Yes" />
+                        <label>Yes</label><br />
+                        <input type="radio" name="Public" value="No" />
+                        <label>No</label>
+                        <br /><br />
+
+                        <label for="DatePublic">Date Public</label>
+                        <input type="datetime-local" name="DatePublic" id="DatePublic" /><br /><br />
+
+                        @*<button onclick="btnSubmit_Click();" style="background:green; color:white; border-radius:5px;" type="submit" value="submit">Submit </button>
+                            <button onclick="btnReset_Click();" id="btnReset_Click" style="background: blue; color: white; border-radius: 5px;" type="reset" value="reset">Clear</button>*@
+
+                        <input type="submit" value="Submit" style="background:green; color:white;" />
+                        <input type="reset" value="Clear" style="background:blue; color:white;" />
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
+
+
+
